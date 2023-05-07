@@ -11,9 +11,9 @@ function Balance() {
     const total = incomes.reduce((acc, item) => (acc += item), 0) - expenses.reduce((acc, item) => (acc += item), 0)
 
     return (
-        <div>
-            <h1>Balance</h1>
-            <h3>${total}</h3>
+        <div className="flex justify-between">
+            <h3>Balance</h3>
+            <h1 className="text-2xl font-bold">${total}</h1>
         </div>
     );
 }
