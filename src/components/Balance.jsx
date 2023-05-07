@@ -8,7 +8,7 @@ function Balance() {
     const incomes = transactions.filter(isIncome).map((transaction) => transaction.amount);
     const expenses = transactions.filter(isExpense).map((transaction) => transaction.amount);
 
-    const total = incomes.reduce((acc, item) => (acc += item), 0) - expenses.reduce((acc, item) => (acc += item), 0)
+    const total = incomes.reduce((acc, item) => (acc += item), 0) - expenses.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
     return (
         <div className="flex justify-between">
