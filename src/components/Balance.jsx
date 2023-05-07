@@ -3,7 +3,7 @@ import { useGlobalState } from "../context/GlobalState"
 function Balance() {
     const { transactions } = useGlobalState();
 
-    const isIncome = (item) => item.type == "Ingreso";
+    const isIncome = (item) => item.type == "Income";
     const isExpense = (item) => item.type === "Gasto";
     const incomes = transactions.filter(isIncome).map((transaction) => transaction.amount);
     const expenses = transactions.filter(isExpense).map((transaction) => transaction.amount);

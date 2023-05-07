@@ -6,8 +6,8 @@ function TransactionForm() {
     
     const types = [
         {value: '', text: '--Choose an option--'},
-        {value: 'Ingreso', text: 'Ingreso 📈'},
-        {value: 'Gasto', text: 'Gasto 📉'},
+        {value: 'Income', text: 'Income 📈'},
+        {value: 'Expense', text: 'Expense 📉'},
     ];
     const [type, setType] = useState(types[0].value)
     const [category, setCategory] = useState()
@@ -35,17 +35,17 @@ function TransactionForm() {
                         </option>
                     ))}
                 </select>
-                <input type="text" placeholder="Categoria"
+                <input type="text" placeholder="Category"
                     onChange={(e) => setCategory(e.target.value)}
                 />
-                <input type="text" placeholder="Descripción"
+                <input type="text" placeholder="Description"
                     onChange={(e) => setDescription(e.target.value)}
                 />
                 <input type="number" placeholder="00.00" step="0.01"
                     onChange={(e) => setAmount(e.target.value)}
                 />
                 <button>
-                    Añadir
+                    Add
                 </button>
             </form>
         </div>
